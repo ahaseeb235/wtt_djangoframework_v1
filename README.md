@@ -1,7 +1,8 @@
 # Django Frameworks Project: Work Time Tracker
 
 Render URL: https://wttondjango-v1.onrender.com
-Git Repo: https://github.com/ahaseeb235/wttondjango_v1.git
+
+Git Repo: https://github.com/ahaseeb235/wtt_djangoframework_v1.git
 
 A web application built with Django to track employee working hours, manage user data, and generate insightful dashboards.
 
