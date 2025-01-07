@@ -1,0 +1,28 @@
+{% extends 'webapp/base.html' %}
+{% block content %}
+
+
+<body>
+    <br>
+    <br>
+    <div class="container jumbotron">
+        <div class="text-center">
+            <h1>Work Time Tracker</h1>
+            <br>
+            <p>Track your work time easily</p>
+            <p>add more text.....</p>
+            <br>
+
+            <a href="{% url 'register' %}" class="btn btn-primary" type="button">Create Your Account</a>
+
+        </div>
+        <br>
+        <div class="text-center">
+            <p>Already have an account? <a href="{% url 'login' %}">Login here!</a></p>
+        </div>
+    </div>
+
+
+</body>
+
+{% endblock %}

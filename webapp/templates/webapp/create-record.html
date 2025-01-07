@@ -1,0 +1,76 @@
+{% extends 'webapp/base.html' %}
+
+{% load static crispy_forms_tags %}
+{% block title %} Create your Record {% endblock %}
+
+{% block content %}
+
+<div class="container bg-light shadow-md p-5 form-layout">
+    <div class="text-center">
+        <h3> Create record </h3>
+
+        <p> Add the details for your entry </p>
+    </div>
+
+    <hr>
+    <br>
+
+    <form method="POST" autocomplete="off">
+
+        {% csrf_token %}
+
+        {{form.firstname|as_crispy_field}}
+
+        <br>
+
+        {{form.lastname|as_crispy_field}}
+
+        <br>
+
+        {{form.date|as_crispy_field}}
+
+        <br>
+
+        {{form.month|as_crispy_field}}
+
+        <br>
+
+        {{form.workday_type|as_crispy_field}}
+
+        <br>
+
+        {{form.time_in|as_crispy_field}}
+
+        <br>
+
+        {{form.time_out|as_crispy_field}}
+
+        <br>
+
+        <button type="submit" class="btn btn-primary">
+            Create record &nbsp; <i class="fa fa-check" aria-hidden="true"></i>
+        </button>
+
+        &nbsp;
+
+        <a href="{% url 'dashboard' %}" class="btn btn-secondary">
+            Return &nbsp; <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </a>
+
+    </form>
+
+    <br><br>
+
+</div>
+
+<br>
+
+<!-- Include Flatpickr JS and CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="{% static 'js/script.js' %}"></script>
+
+
+
+
+{% endblock %}

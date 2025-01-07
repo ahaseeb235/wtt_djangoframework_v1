@@ -1,0 +1,39 @@
+{% extends 'webapp/base.html' %}
+
+{% block content %}
+
+<div class="card">
+    <div class="card-body">
+        <h2 class="user-name">
+            {{record.firstname}}
+            {{record.lastname}}
+        </h2>
+
+        <hr>
+        <p> <strong> ID: </strong> {{record.id}} </p>
+        <p> <strong> Date: </strong> {{record.date}} </p>
+        <p> <strong> Month: </strong> {{record.month}} </p>
+        <p> <strong> Type: </strong> {{record.workday_type}} </p>
+        <p> <strong> Time in: </strong> {{record.time_in}} </p>
+        <p> <strong> Time out: </strong> {{record.time_out}} </p>
+        <p> <strong> Total Hours: </strong> {{record.total_hours}} </p>
+    </div>
+</div>
+
+<br>
+
+<a href="{% url 'dashboard' %}" class="btn btn-secondary"> Return to Dashboard &nbsp; <i class="fa fa-arrow-left"
+        aria-hidden="true"></i> </a>
+
+&nbsp;
+
+<a href="{% url 'update-record' record.id %}" class="btn btn-info"> Update record <i class="fa fa-plus"
+        aria-hidden="true"></i> </a>
+
+&nbsp;
+
+<a href="{% url 'delete-record' record.id %}" class="btn btn-danger">Delete &nbsp;<i class="fa fa-minus-square"
+        aria-hidden="true"></i> </a>
+
+
+{% endblock %}

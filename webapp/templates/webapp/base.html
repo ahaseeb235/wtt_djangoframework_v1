@@ -1,0 +1,83 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/pulse/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- flatpicker -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <title>
+        {% if page_title %}
+        {{ page_title }} - wttApp
+        {% else %}
+        Work Time Tracker
+        {% endif %}
+    </title>
+</head>
+
+<body>
+    <!-- navbar -->
+
+    {% include 'webapp/navbar.html' %}
+
+    <div class="container">
+        <br>
+
+        <!-- notification message -->
+        {% for message in messages %}
+
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+
+
+        <p id="message-timer" class="alert alert-success float-center text-center message-text">
+
+            <i class="fa fa-check" aria-hidden="true"></i> &nbsp; {{message}}
+
+        </p>
+
+
+        {% endif %}
+
+
+        {% endfor %}
+
+
+        {% block content %}
+
+
+
+        {% endblock %}
+
+    </div>
+
+    <!-- footer-->
+
+    <footer>
+        <div class="container">
+            <br>
+            <p class="text-center">Work Time Tracker &copy; 2021</p>
+        </div>
+    </footer>
+
+    <!-- scripts -->
+
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>
