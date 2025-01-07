@@ -1,10 +1,10 @@
 # Django Frameworks Project: Work Time Tracker
 
-Render URL: https://wttondjango-v1.onrender.com
+Render URL: https://wtt-djangoframework-v1.onrender.com
 
 Git Repo: https://github.com/ahaseeb235/wtt_djangoframework_v1.git
 
-A web application built with Django to track employee working hours, manage user data, and generate insightful dashboards.
+A web application built with Django to track employee working hours
 
 ## Table of Contents
 - [Features](#features)
@@ -24,16 +24,16 @@ A web application built with Django to track employee working hours, manage user
   - Log daily working hours with time-in and time-out.
   - calculation of total work hours
   - when workday_type is Bank Holiday or Sick Leave or Annual Leave, then time_in/time_out are not required. 
-  - Categorize workdays as Training, Sick Leave, Annual Leave, Overtime, etc.
+  - Categorize workdays as Work, Sick Leave, Annual Leave, Bank Holiday.
 - **Dashboard**:
-  - View total hours worked per month and categorized hours (e.g., Sick Leave, Overtime).
+  - List view of total hours worked per month and categorized hours (e.g., Sick Leave, Overtime).
   - pagination on dashboard page
 - **Data Management and hosting**:
   - use of postgreSQL 
   - hosting on render.com
 - **Responsive Design**:
   - Bootstrap-based layouts for seamless use across devices.
-- **Use if Javascript**:
+- **Use of Javascript**:
   - Use of JS for success messages on the pages
   - To add calendar and time functionality for the form. (Flatpicker library)
 
@@ -59,8 +59,8 @@ A web application built with Django to track employee working hours, manage user
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ahaseeb235/wttondjango_v1.git
-   cd wttondjango_v1
+   git clone https://github.com/ahaseeb235/wtt_djangoframework_v1.git
+   
 
 
 2. To setup environment
