@@ -33,7 +33,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = os.getenv('DEBUG') == 'TRUE'
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', os.getenv('RENDER_HOSTNAME', '1')]
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', os.getenv('RENDER_HOSTNAME', '')]
 
 
 # Application definition
